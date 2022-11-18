@@ -1,7 +1,7 @@
 ﻿
 public static class Deposito
 {
-    public static float saldo_hoje = 0;
+    public static float saldo_hoje = 100;
     public static void ShowDepositar()
     {
         Console.Clear();

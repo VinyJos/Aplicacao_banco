@@ -2,11 +2,16 @@
 
 using System;
 using System.ComponentModel.Design;
+using System.Threading;
+
+
+
 
 public static class Pagar
 {
     public static void PagarConta()
     {
+       
         Show();
 
         var opcao = int.Parse(Console.ReadLine());
@@ -15,8 +20,11 @@ public static class Pagar
             case 1: ShowBoleto(); break;
             case 2: Console.WriteLine("cartão"); break;
             case 3: Menu.Show();break;
+            default:Show(); break;
         }
 
+        
+        
         
     }
 
@@ -59,9 +67,14 @@ public static class Pagar
             Console.Clear();
             Console.WriteLine("========================");
             Console.WriteLine("======BOLETO PAGO=======");
-            Console.WriteLine("")
-            Console.WriteLine("")
+            Console.WriteLine("");
             Console.WriteLine("========================");
+            Thread.Sleep(2000);
+            Console.Clear();
+            PagarConta();
+
+            
+            
 
         }
         else
@@ -69,9 +82,11 @@ public static class Pagar
             Console.WriteLine("========================");
             Console.WriteLine("ATENÇÃO: Saldo insuficiente para pagar esse boleto!");
             Console.WriteLine("========================");
+            Thread.Sleep(3000);
+            Console.Clear();
+            PagarConta();
         }
-        Console.Clear();
-        Pagar.Show();
+       
 
     }
 
@@ -82,6 +97,8 @@ public static class Pagar
 
 
     }
+
+    
 
 
 
