@@ -28,11 +28,6 @@ public static class Pagar
         
     }
 
-    public static void PagarBoleto()
-    {
-        
-    }
-
     public static void Show()
     {
 

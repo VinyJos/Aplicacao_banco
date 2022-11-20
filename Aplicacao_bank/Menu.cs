@@ -35,7 +35,7 @@ public static class Menu
             case "2": Console.WriteLine("Extrato"); break;
             case "3": Console.WriteLine("Pix"); break;
             case "4": Pagar.PagarConta(); break;
-            case "5": Console.WriteLine("Transferir"); break;
+            case "5": Transferir.TransferirValor(); break;
             case "6": Deposito.ShowDepositar(); break;
             case "7": Console.WriteLine("Cartao de credito"); break;
             case "sair":

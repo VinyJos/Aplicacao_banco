@@ -8,7 +8,7 @@ public static class Saldo
         
         Console.WriteLine("========================");
         Console.Write("Saldo: ");
-        Console.WriteLine(Deposito.saldo_hoje);
+        Console.WriteLine(Deposito.saldo_hoje.ToString("C"));
  
         Console.WriteLine("");
         
