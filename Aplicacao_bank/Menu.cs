@@ -32,7 +32,7 @@ public static class Menu
         switch (option)
         {
             case "1": Saldo.MeuSaldo(); break;
-            case "2": Console.WriteLine("Extrato"); break;
+            case "2": Extrato.ImpressaoExtrato(); break;
             case "3": Console.WriteLine("Pix"); break;
             case "4": Pagar.PagarConta(); break;
             case "5": Transferir.TransferirValor(); break;

@@ -10,6 +10,8 @@ public static class Deposito
         var valor = float.Parse(Console.ReadLine());
         Console.WriteLine("========================");
         Depositar(valor);
+        string text = "Deposito:";
+        Extrato.GuardarDadosNoExtrato(text ,valor);
         OpcoesDP();
 
         var option = int.Parse(Console.ReadLine());

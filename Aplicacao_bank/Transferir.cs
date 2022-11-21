@@ -65,6 +65,7 @@ public static class Transferir
         if (total <= Deposito.saldo_hoje)
         {
             RetirarSaldoTransferencia(valor, taxa_doc);
+            Extrato.GuardarDadosNoExtrato("Doc:", total);
             Console.Clear();
             Console.WriteLine("========================");
             Console.WriteLine("TRANSFER�NCIA REALIZADA COM SUCESSO");
@@ -107,6 +108,7 @@ public static class Transferir
         if (total <= Deposito.saldo_hoje)
         {
             RetirarSaldoTransferencia(valor, taxa_ted);
+            Extrato.GuardarDadosNoExtrato("Ted:",total);
             Console.Clear();
             Console.WriteLine("========================");
             Console.WriteLine("TRANSFER�NCIA REALIZADA COM SUCESSO");

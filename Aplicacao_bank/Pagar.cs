@@ -59,6 +59,7 @@ public static class Pagar
         if (valor <= Deposito.saldo_hoje)
         {
             RetirarSaldo(valor);
+            Extrato.GuardarDadosNoExtrato("Boleto:",valor);
             Console.Clear();
             Console.WriteLine("========================");
             Console.WriteLine("======BOLETO PAGO=======");
