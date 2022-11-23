@@ -1,5 +1,4 @@
-﻿
-public static class Menu
+﻿public static class Menu
 {
     public static void Show()
     {   
@@ -22,8 +21,6 @@ public static class Menu
         string option = Console.ReadLine();
         
         MenuOption(option);
-
-
     }
 
     public static void MenuOption(string option)
@@ -45,9 +42,7 @@ public static class Menu
                     break;
                 }
             default: Show(); break;
-        }
-
-        
+        }   
     }
 
     public static void Voltar()

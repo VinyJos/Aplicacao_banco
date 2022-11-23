@@ -1,10 +1,6 @@
-﻿
-
-using System;
+﻿using System;
 using System.ComponentModel.Design;
 using System.Threading;
-
-
 
 
 public static class Pagar
@@ -13,19 +9,19 @@ public static class Pagar
     {
        
         Show();
+        Boleto();  
+    }
 
+    public static void Boleto()
+    {
         var opcao = int.Parse(Console.ReadLine());
         switch (opcao)
         {
             case 1: ShowBoleto(); break;
             case 2: Console.WriteLine("cartão"); break;
-            case 3: Menu.Show();break;
-            default:Show(); break;
+            case 3: Menu.Show(); break;
+            default: Show(); break;
         }
-
-        
-        
-        
     }
 
     public static void Show()
@@ -83,7 +79,6 @@ public static class Pagar
             PagarConta();
         }
        
-
     }
 
     public static void RetirarSaldo(float valor)
@@ -91,11 +86,5 @@ public static class Pagar
         //float saldo_hoje = 0;
         Deposito.saldo_hoje -= valor;
 
-
     }
-
-    
-
-
-
 }

@@ -1,4 +1,3 @@
-
 using System;
 using System.ComponentModel.Design;
 using System.Threading;
@@ -139,8 +138,8 @@ public static class Transferir
     {
         float taxa_valor = valor + taxa;
         Deposito.saldo_hoje -= taxa_valor;
-
-
     }
 }
+
+
    

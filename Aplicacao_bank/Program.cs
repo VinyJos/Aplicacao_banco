@@ -1,5 +1,3 @@
 ﻿
-
 Menu.Show();
-
 Console.ReadKey();

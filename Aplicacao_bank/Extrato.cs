@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -11,6 +10,9 @@ public static class Extrato
     public static void ImpressaoExtrato()
     {
         Console.Clear();
+        
+        Console.WriteLine("=========EXTRATO========");
+        Console.WriteLine("");
         for (int index = 0; index < extrato.Count; index++)
         {
             Console.Write(titulo[index] );
@@ -21,11 +23,20 @@ public static class Extrato
                 CultureInfo.CreateSpecificCulture("pt-BR")
                 ));
         }
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Saldo.Voltar();
     }
 
     public static void GuardarDadosNoExtrato(string texto ,float valor)
     {
         extrato.Insert(0, valor);
         titulo.Insert(0, texto);
+    }
+
+    public static void Opcoes()
+    {
+        Console.WriteLine("");
     }
 }
