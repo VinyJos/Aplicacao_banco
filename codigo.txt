@@ -1,0 +1,41 @@
+Console.Write("Digite o código de barras : ");
+        var codigo = Console.ReadLine();
+
+
+        
+        bool isNumber = float.TryParse(codigo, out float numericValue);
+        bool compare = true;
+        try
+        {
+            if ((codigo.Count()) == 48 || (codigo.Length) == 47)
+            {
+                Console.WriteLine("");
+            }
+            else if (isNumber == compare)
+            {
+                Console.WriteLine("Código inválido ! ");
+                Console.WriteLine("Deve contar apenas números");
+                Thread.Sleep(3000);
+            }
+            else
+            {
+                Console.WriteLine("Código inválido ! ");
+                Console.WriteLine("deve conter 47 ou 48 números válidos...");
+                Thread.Sleep(5000);
+                ShowBoleto();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Código inválido ! ");
+            Console.WriteLine($"Aceita apenas números {ex.InnerException}");
+            Thread.Sleep(5000);
+            ShowBoleto();
+        }
+
+
+        public float Codigo()
+        {
+            Console.Write("Digite o código de barras : ");
+            public float codigo = float.Parse(Console.ReadLine());
+        }

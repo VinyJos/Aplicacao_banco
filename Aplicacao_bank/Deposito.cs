@@ -1,47 +1,52 @@
-﻿public static class Deposito
+﻿namespace Aplicacao_bank
 {
-    public static float saldo_hoje = 0;
-    public static void ShowDepositar()
+
+    public static class Deposito
     {
-        Console.Clear();
-        Console.WriteLine("========================");
-        Console.Write(" Digite o valor a ser depositado: R$ ");
-        var valor = float.Parse(Console.ReadLine());
-        Console.WriteLine("========================");
-        Depositar(valor);
-        string text = "Deposito:";
-        Extrato.GuardarDadosNoExtrato(text ,valor);
-        OpcoesDP();
-
-        var option = int.Parse(Console.ReadLine());
-       
-
-        switch(option)
+        public static float saldo_hoje = 1000;
+        public static void ShowDepositar()
         {
-            case 1: ShowDepositar(); break;
-            case 2: Menu.Show(); break;
-            default: OpcoesDP(); break;
+            Console.Clear();
+            Console.WriteLine("========================");
+            Console.Write(" Digite o valor a ser depositado: R$ ");
+            var valor = float.Parse(Console.ReadLine());
+            Console.WriteLine("========================");
+            Depositar(valor);
+            string text = "Deposito:";
+            Extrato.GuardarDadosNoExtrato(text, valor);
+            OpcoesDP();
+
+            var option = int.Parse(Console.ReadLine());
+
+
+            switch (option)
+            {
+                case 1: ShowDepositar(); break;
+                case 2: Menu.Show(); break;
+                default: OpcoesDP(); break;
+            }
+
         }
 
-    }
+        public static void Depositar(float valor)
+        {
+            //float saldo_hoje = 0;
+            saldo_hoje += valor;
 
-    public static void Depositar(float valor)
-    {
-        //float saldo_hoje = 0;
-        saldo_hoje += valor;
-        
 
-    }
+        }
 
-    public static void OpcoesDP()
-    {
-        Console.Clear();
-        Console.WriteLine("========================");
-        Console.WriteLine("DEPOSITO FEITO COM SUCESSO");
-        Console.WriteLine();
-        Console.WriteLine("1 - Depositar outro valor");
-        Console.WriteLine("2 - Voltar ao menu inicial");
-        Console.WriteLine("========================");
+        public static void OpcoesDP()
+        {
+            Console.Clear();
+            Console.WriteLine("========================");
+            Console.WriteLine("DEPOSITO FEITO COM SUCESSO");
+            Console.WriteLine();
+            Console.WriteLine("1 - Depositar outro valor");
+            Console.WriteLine("2 - Voltar ao menu inicial");
+            Console.WriteLine("========================");
+
+        }
 
     }
 
